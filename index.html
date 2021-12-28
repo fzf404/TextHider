@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>fzf404 | 文字隐藏者</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web-themes@0.2.12/simple/common.css" />
+    <script src="https://cdn.jsdelivr.net/npm/web-themes@0.2.12/simple/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/text-hider/index.js"></script>
+  </head>
+  <body>
+    <h1>文字隐藏者 🥷</h1>
+    <h2>Hiden Text in Message 💬</h2>
+    <div class="help">
+      <label></label>
+      <span class="notice">加密需填写如下两字段</span>
+      <br />
+    </div>
+    <label>密文</label>
+    <input id="secret" type="text" placeholder="需要隐藏的文字" />
+    <br />
+    <label>载体</label>
+    <input id="message" type="text" placeholder="只需两个字足以" />
+    <br />
+    <div class="help">
+      <label></label>
+      <span class="notice">加/解密时如需密码则填写</span>
+      <br />
+    </div>
+    <label>密钥</label>
+    <input id="password" type="text" placeholder="可不填" />
+    <br />
+    <div class="help">
+      <label></label>
+      <span class="notice">解密需填写如下字段</span>
+      <br />
+    </div>
+    <label>结果</label>
+    <input id="result" type="text" placeholder="带有隐藏信息的文本" />
+    <p class="center">
+      <a onclick="hide()">加密</a>
+      <a></a>
+
+      <a class="purple" onclick="reveal()">解密</a>
+    </p>
+    <p>
+      <a class="fr" href="index.html">返回</a>
+      <a class="pink fr" href="https://github.com/fzf404/TextHider" target="_blank">Github</a>
+      <a class="grey-blue fr" onclick="help()">帮助</a>
+    </p>
+    <script>
+      function hide() {
+        const secret = $('#secret').val()
+        const message = $('#message').val()
+        const password = $('#password').val()
+        const result = new StegCloak().hide(secret, password, message)
+        $('#result').val(result)
+      }
+      function reveal() {
+        const result = $('#result').val()
+        const password = $('#password').val()
+        const secret = new StegCloak().reveal(result, password)
+        $('#secret').val(secret)
+      }
+      function help() {
+        $('.help').toggle()
+      }
+    </script>
+  </body>
+</html>
