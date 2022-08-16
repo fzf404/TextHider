@@ -23,11 +23,13 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
     "browserify-cipher": "^1.0.1",
     "create-hmac": "^1.1.7",
     "lzutf8": "^0.6.0",
     "pbkdf2": "^3.1.2",
     "ramda": "^0.27.1",
+    "randombytes": "^2.1.0",
     "safe-buffer": "^5.2.1",
     "timing-safe-equal": "^1.0.0"
   }
