@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '.'),
-    library:'StegCloak'
+    library: 'StegCloak',
   },
+  mode: 'production',
 }
