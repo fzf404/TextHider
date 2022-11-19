@@ -1,28 +1,19 @@
 {
   "name": "text-hider",
-  "version": "1.1.0",
-  "description": "Hide Message in Text",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack"
-  },
+  "version": "1.1.1",
+  "description": "Hidde Message in Text",
+  "homepage": "https://tool.fzf404.art/hide/",
   "repository": {
     "type": "git",
     "url": "https://github.com/fzf404/TextHider"
   },
-  "author": "fzf404",
   "license": "MIT",
-  "devDependencies": {
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.2",
-    "minifyify": "^7.3.5",
-    "standard": "^14.3.4",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.3"
+  "author": "fzf404",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack"
   },
   "dependencies": {
-    "@babel/core": "^7.19.3",
     "browserify-cipher": "^1.0.1",
     "create-hmac": "^1.1.7",
     "lzutf8": "^0.5.8",
@@ -31,5 +22,13 @@
     "randombytes": "^2.1.0",
     "safe-buffer": "^5.2.1",
     "timing-safe-equal": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=7"
   }
 }

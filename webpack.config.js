@@ -1,11 +1,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: './stegcloak.js',
+  entry: './core/index.js',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, '.'),
-    library: 'StegCloak',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'TextHider',
   },
   mode: 'production',
 }

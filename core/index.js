@@ -2,11 +2,11 @@
 
 const R = require('ramda')
 
-const { encrypt, decrypt } = require('./components/encrypt')
+const { encrypt, decrypt } = require('./encrypt')
 
-const { compress, decompress, zwcHuffMan } = require('./components/compact')
+const { compress, decompress, zwcHuffMan } = require('./compact')
 
-const { zwcOperations, embed } = require('./components/message')
+const { zwcOperations, embed } = require('./message')
 
 const zwc = ['‌', '‍', '⁡', '⁢', '⁣', '⁤'] // 200c,200d,2061,2062,2063,2064 Where the magic happens !
 
@@ -14,9 +14,9 @@ const { toConceal, toConcealHmac, concealToData, noCrypt, detach } = zwcOperatio
 
 const { shrink, expand } = zwcHuffMan(zwc)
 
-const { byteToBin, compliment } = require('./components/util')
+const { byteToBin, compliment } = require('./util')
 
-class StegCloak {
+class TextHider {
   constructor(_encrypt = true, _integrity = false) {
     this.encrypt = _encrypt
 
