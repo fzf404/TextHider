@@ -72,4 +72,4 @@ class TextHider {
   }
 }
 
-module.exports = StegCloak
+module.exports = TextHider
