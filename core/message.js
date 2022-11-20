@@ -71,7 +71,7 @@ const zwcOperations = (zwc) => {
       return acc
     }, '')
     if (!detached) {
-      throw new Error('Invisible stream not detected! Please copy and paste the TextHider text sent by the sender.')
+      throw new Error('错误的文本流！')
     }
     return detached
   }
