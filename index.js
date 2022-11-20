@@ -2,11 +2,11 @@
 
 const R = require('ramda')
 
-const { encrypt, decrypt } = require('./encrypt')
+const { encrypt, decrypt } = require('./core/encrypt')
 
-const { compress, decompress, zwcHuffMan } = require('./compact')
+const { compress, decompress, zwcHuffMan } = require('./core/compact')
 
-const { zwcOperations, embed } = require('./message')
+const { zwcOperations, embed } = require('./core/message')
 
 const zwc = ['‌', '‍', '⁡', '⁢', '⁣', '⁤'] // 200c,200d,2061,2062,2063,2064 Where the magic happens !
 
@@ -14,7 +14,7 @@ const { toConceal, toConcealHmac, concealToData, noCrypt, detach } = zwcOperatio
 
 const { shrink, expand } = zwcHuffMan(zwc)
 
-const { byteToBin, compliment } = require('./util')
+const { byteToBin, compliment } = require('./core/util')
 
 class TextHider {
   constructor(_encrypt = true, _integrity = false) {
@@ -27,7 +27,7 @@ class TextHider {
     return zwc
   }
 
-  hide(message, password, cover = 'This is a confidential text') {
+  hide(message, password, cover) {
     if (cover.length < 2) {
       return '源信息不得少于两位!'
     }
