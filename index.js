@@ -29,7 +29,7 @@ class TextHider {
 
   hide(message, password, cover) {
     if (cover.length < 2) {
-      return '信息本体不得少于两个字符!'
+      return '原文少于两个字符!'
     }
 
     const integrity = this.integrity
