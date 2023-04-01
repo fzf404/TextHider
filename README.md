@@ -9,6 +9,7 @@
 ```
 你⁡‍‍‍‍⁢⁡‌⁢‍⁢‍‌⁤‍⁤‌⁤‍‍⁡‌‍⁡‌‍‍⁢‌⁢‌⁤‌⁡‌⁡⁣‌⁢‌⁡‌⁢⁡⁡⁢⁡⁢⁣⁤⁢⁡⁣⁤‍⁤‌⁡⁡‌⁡‍⁢‍⁡‍⁡⁡‌⁡⁢⁡⁡⁡⁤⁣⁢‌⁢‌⁢‍‍⁡‍⁢⁣⁡⁢‍⁡⁢‌⁢‍⁡‌⁡‍⁡‍⁣⁤⁡‍⁡‍好呀，我是TextHider，快来解密试试吧。
 ```
+
 ## 使用
 
 - 通过 NPM 安装
@@ -26,13 +27,13 @@ import { TextHider } from 'text-hider'
 - 通过 CDN 引入
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/text-hider/dist/index.js"></script>
+<script src="https://cdn.fzf404.art/texthider/dist/index.js"></script>
 ```
 
 - 快速开始
 
 ```js
-const Hider = new TextHider();
+const Hider = new TextHider()
 
 let secret = 'Secret' // 需要隐藏的密文
 let password = '' // 加密密钥
@@ -52,7 +53,7 @@ const cipher = Hider.reveal(result, password)
 - 支持密钥加密，无密钥则无法解密
 
 - 无需后端，纯前端即可完成加解密流程
-   
+
 ## 原理
 
 - 从 Unicode 中选取了 6 个不可见字符
@@ -66,7 +67,6 @@ const cipher = Hider.reveal(result, password)
 ## 说明
 
 - 基于 [StegCloak](https://github.com/KuroLabs/stegcloak)
-  
 - 由于其对汉字等无分隔文字的支持较弱
 
 - 所以在此基础上进行二次开发
