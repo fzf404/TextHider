@@ -2,7 +2,7 @@
 
 > 用于在文本中隐藏信息
 
-## [演示](http://tool.fzf404.art/hide/)
+## [演示](http://tools.fzf404.art/hide/)
 
 - 复制如下内容到结果框，点击解密按钮看看吧！
 
@@ -27,7 +27,7 @@ import { TextHider } from 'text-hider'
 - 通过 CDN 引入
 
 ```html
-<script src="https://cdn.fzf404.art/texthider/dist/index.js"></script>
+<script src="https://cdn.fzf404.art/text-hider/dist/index.js"></script>
 ```
 
 - 快速开始
